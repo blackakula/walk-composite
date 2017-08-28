@@ -1,6 +1,6 @@
 import InitDefault from "./InitDefault";
 
-const Walk = (parameters) => {
+export const Walk = (parameters) => {
     const defaults = InitDefault(parameters);
     return leafCallback => (...data) => defaults.leafCondition()(...data)
         ? leafCallback(...data)

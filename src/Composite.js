@@ -1,6 +1,6 @@
 import InitDefault from './InitDefault';
 
-const Composite = (parameters) => {
+export const Composite = (parameters) => {
     const defaults = InitDefault(parameters);
     const reducerMethod = defaults.reducerMethod();
     return leafCallback => (...data) => defaults.keysMethod()(...data).reduce(

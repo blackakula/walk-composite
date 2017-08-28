@@ -8,7 +8,8 @@ import WalkFunction from './Example/WalkFunction';
 import Composite from './Composite';
 import Walk from './Walk';
 
-const Defaults = {KeysMethod, LeafCondition, MutationMethod, ReducerMethod};
-const Examples = {WalkFunction};
-export {Walk, Composite, Defaults, Examples};
-export default Walk;
+export const Defaults = {KeysMethod, LeafCondition, MutationMethod, ReducerMethod};
+export const Examples = {WalkFunction};
+export default { Walk, Composite, Defaults, Examples };
+export { Composite } from './Composite';
+export { Walk } from './Walk';

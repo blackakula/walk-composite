@@ -6,17 +6,21 @@ module.exports = {
     },
     output: {
         path: __dirname,
-        filename: "[name].js"
+        library: "walk-composite",
+        filename: "[name].js",
+        libraryTarget: "commonjs2"
     },
-    module:{loaders: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: "babel-loader",
-            query: {
-                plugins: ['transform-object-rest-spread'],
-                presets:['es2015']
+    module:{
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "babel-loader",
+                query: {
+                    plugins: ['transform-object-rest-spread'],
+                    presets:['es2015']
+                }
             }
-        }
-    ]}
+        ]
+    }
 };
