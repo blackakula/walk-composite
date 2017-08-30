@@ -88,6 +88,8 @@ module.exports =
 	    }
 	};
 	
+	tests();
+	
 	exports.default = tests;
 
 /***/ }),
