@@ -10,6 +10,6 @@ import Walk from './Walk';
 
 export const Defaults = {KeysMethod, LeafCondition, MutationMethod, ReducerMethod};
 export const Examples = {WalkFunction};
+export * from './Composite';
+export * from './Walk';
 export default { Walk, Composite, Defaults, Examples };
-export { Composite } from './Composite';
-export { Walk } from './Walk';
