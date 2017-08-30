@@ -50,10 +50,6 @@ module.exports =
 
 	'use strict';
 	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
 	var _index = __webpack_require__(/*! ./index */ 1);
 	
 	var _ = _interopRequireWildcard(_index);
@@ -89,8 +85,6 @@ module.exports =
 	};
 	
 	tests();
-	
-	exports.default = tests;
 
 /***/ }),
 /* 1 */

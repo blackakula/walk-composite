@@ -15,5 +15,3 @@ const tests = () => {
 };
 
 tests();
-
-export default tests;
