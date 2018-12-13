@@ -152,7 +152,7 @@ module.exports =
 	
 	            return defaults.keysMethod().apply(undefined, data).reduce(function (result, key) {
 	                var value = defaults.walkMethod()(parameters)(leafCallback).apply(undefined, _toConsumableArray(defaults.mutationMethod()(key).apply(undefined, data)));
-	                return reducerMethod.add(result, key, value);
+	                return reducerMethod.add(result, value, key);
 	            }, reducerMethod.init.apply(reducerMethod, data));
 	        };
 	    };
@@ -354,7 +354,7 @@ module.exports =
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 	
 	var ReducerMethod = {
-	    add: function add(result, key, value) {
+	    add: function add(result, value, key) {
 	        return Array.isArray(result) ? [].concat(_toConsumableArray(result), [value]) : _extends({}, result, _defineProperty({}, key, value));
 	    },
 	    init: function init(data) {

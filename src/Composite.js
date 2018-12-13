@@ -6,7 +6,7 @@ export const Composite = (parameters) => {
     return leafCallback => (...data) => defaults.keysMethod()(...data).reduce(
         (result, key) => {
             const value = defaults.walkMethod()(parameters)(leafCallback)(...defaults.mutationMethod()(key)(...data));
-            return reducerMethod.add(result, key, value);
+            return reducerMethod.add(result, value, key);
         },
         reducerMethod.init(...data)
     );
